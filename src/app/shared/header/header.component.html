@@ -1,1 +1,22 @@
-<p>header works!</p>
+<header class="d-flex justify-content-between flex-row | header">
+    <div class="rectangle-large"></div>
+    <img src="../../../assets/images/logo.svg" class="img--logo" alt="logo" />
+    <!--El rectángulo se mueve en función de en que parte del menú te encuentres en la página, que se hará con JS-->
+    <div class="rectangle"></div>
+    <nav id="my-first" class="nav__container">
+      <ul class="d-flex flex-row-reverse align-items-center justify-content-between | nav__container--list underline">
+        <li class="burger">
+          x
+        </li>
+        <li class="align-items-center | menu">
+          @for (item of menuItems; track $index) {
+            <a class="menu-item">
+                <span class="menu-item--span">{{ item.index }}</span>
+                {{ item.name }}
+            </a> 
+            }
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- <router-outlet></router-outlet> -->

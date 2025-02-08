@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+/* *************************************** Variables *************************************** */
+// fonts
+$bellefair: 'Bellefair', serif;
+$barlowCondensed: 'Barlow Condensed', sans-serif;
+$zen: 'Zen Antique', serif;
+
+$heading1: 9rem;
+$heading2: 6rem;
+$heading3: 3.5rem;
+$heading4: 2rem;
+$heading5: 1.75rem; // barlow condensed
+$subheading: .875rem;
+$nav-text: 1rem; //barlow condensed
+
+// colors
+$sky-night: #0B0D17; //RGB (11, 13, 23) -- HSL(230, 35%, 7%).
+$ligth-purple: #D0D6F9; // RGB (208, 214, 249) -- HSL(231, 77%, 90%).
+$white: #FFFFFF; // RGBA(255, 255, 255) -- HSL(0, 0%, 100%).
+
+/* *************************************** Common styles *************************************** */
+a{
+  text-decoration: none;
+  color: $white;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.btn-explore{
+  color: $sky-night;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+      background-image: url('./assets/images/background-home-mobile.jpg');
+      background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+      @media all and  (min-width: 768px) {
+          background-image: url('./assets/images/background-home-tablet.jpg');
+          
+      }
+      @media all and (min-width: 1024px) {
+        background-image: url('./assets/images/background-home-desktop.jpg');
+       
+      }
+    }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
