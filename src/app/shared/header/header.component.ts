@@ -16,4 +16,9 @@ export class HeaderComponent {
     { name: 'Contact', index: '04', link: '/contact' }
   ]
   
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

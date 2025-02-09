@@ -74,13 +74,20 @@ $menuBreakpoint: 767px;
     display: none;
     padding: 0 10px;
 
+  &__button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    left: 80%;
+    outline: inherit;
+    padding: 0;
+    position: relative;
+  }
+
     @media (max-width: $menuBreakpoint) {
       display: block;
-    }
-
-    .bi-x-lg {
-      position: relative;
-      left: 90%;
     }
 }
 
