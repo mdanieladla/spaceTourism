@@ -3,13 +3,15 @@ $menuHeight: 60px;
 $menuBreakpoint: 767px;
 /*-------------------------- HEADER ------------------------*/
 .header {
+  @media (min-width: $menuBreakpoint) {
     height: 10vh;
   }
+}
   
 .rectangle-large {
   display: none;
 
-  @media all and (min-width:1024px){
+  @media all and (min-width: 1024px){
     background: #FFFFFF;
     display: inline;
     height: 1px;
@@ -39,24 +41,25 @@ $menuBreakpoint: 767px;
 }
 
 .nav__container {
+
   margin: 0;
 
-  &--list{
+  &--list {
     margin: 0;
     padding: 0;
     
-    @media (max-width: $menuBreakpoint) {
-      background: none;
-    }
+  //   @media (max-width: $menuBreakpoint) {
+  //     background: none;
+  //   }
     
-    @media all and (min-width: 768px) {
-      padding: 10px;
-    }
-  }
+  //   @media all and (min-width: 768px) {
+  //     padding: 10px;
+  //   }
+  // }
 
-  @media all and (min-width:1024px) {
-    margin: 1rem;
-  }
+  // @media all and (min-width:1024px) {
+  //   margin: 1rem;
+  // }
 
 // mat-icon{
 //   color: #fff;
@@ -64,78 +67,98 @@ $menuBreakpoint: 767px;
 // }
 
 .burger {
-    background-color: white;
+    background: rgba(151,151,151,0.3);
+    color: white;
     cursor: pointer;
-    //display: none;
+    font-size: 24px;
+    display: none;
     padding: 0 10px;
 
     @media (max-width: $menuBreakpoint) {
       display: block;
     }
-  }
 
-@media all and (min-width: 768px){
-    align-items: center;
-    backdrop-filter: blur(15px);
-    background-color: rgba(255,255,255,0.1);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    height: 96px;
-    justify-content: space-evenly;
-    width: 450px;
+    .bi-x-lg {
+      position: relative;
+      left: 90%;
+    }
 }
 
-@media all and (min-width:1024px){
-    margin-right: 0;
-    margin-top: 20px;
-    width: 750px;
-} 
+  // @media all and (min-width: 768px){
+  //     align-items: center;
+  //     backdrop-filter: blur(15px);
+  //     background-color: rgba(255,255,255,0.1);
+  //     box-sizing: border-box;
+  //     display: flex;
+  //     flex-direction: row;
+  //     height: 96px;
+  //     justify-content: space-evenly;
+  //     width: 450px;
+  // }
+
+  // @media all and (min-width:1024px){
+  //     margin-right: 0;
+  //     margin-top: 20px;
+  //     width: 750px;
+  // } 
 }
   
 .menu {
     background: rgba(151,151,151,0.3);
-    display: hidden;
-  @media (max-width: $menuBreakpoint) {
-    display: flex;
+    //display: none;
+    height: 100vh;
+   padding: 0 10px;
 
-    &.is-open {
-      backdrop-filter: blur(15px);
-      background: rgba(151,151,151,0.3);
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: #{$menuHeight};
-      width: 70%;
+    &__item {
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      font-family: $barlowCondensed;
+      font-size: 0.875rem;
+      font-size: 1rem;
+      height: $menuHeight;
+      letter-spacing: 2.36px;
+      line-height: $menuHeight;
+      // padding: 0 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &--index {
+        font-weight: bold;
+        margin-right: 5px;
+  
+        // @media all and (min-width:1024px){
+        //   display: inline;
+        // }
+      }
     }
+
+  @media (min-width: $menuBreakpoint) {
+    display: flex;
+    height: 10vh;
+    padding: 0;
+    // &--open {
+    //   backdrop-filter: blur(15px);
+    //   background: rgba(151,151,151,0.3);
+    //   display: block;
+    //   height: 100%;
+    //   position: absolute;
+    //   top: #{$menuHeight};
+    //   width: 70%;
+    // }
   }
-}
 
-.menu-item {
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  font-family: $barlowCondensed;
-  font-size: 0.875rem;
-  font-size: 1rem;
-  height: $menuHeight;
-  letter-spacing: 2.36px;
-  line-height: $menuHeight;
-  padding: 0 10px;
-  text-decoration: none;
-  text-transform: uppercase;
+  @media all and (min-width:1024px) {
+    width: 800px;
 
-  &--span{
-    display: none;
-    font-weight: bold;
-    margin-right: 5px;
-
-    @media all and (min-width:1024px){
-      display: inline;
+    &__item {
+      margin-left: 30px;
     }
   }
 }
 
 .active{
   border-bottom: 2px solid white;
+}
+
 }
