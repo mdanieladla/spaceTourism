@@ -1,39 +1,23 @@
-<header class="d-flex justify-content-between flex-row | header">
-    <div class="rectangle-large"></div>
-    <img src="../../../assets/images/logo.svg" class="img--logo" alt="logo" />
-    <!--El rectángulo se mueve en función de en que parte del menú te encuentres en la página, que se hará con JS-->
-    <div class="rectangle"></div>
-    <nav id="my-first" class="nav__container">
-      <ul class="nav__container--list underline">
-        @if (!isMenuOpen) {
-          <li class="burger ">
-            <button class="burger__button" (click)="toggleMenu()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-              </svg>
-            </button>
-          </li>
+<header class="header">
+  <div class="rectangle-large"></div>
+  <img src="../../../assets/images/logo.svg" class="img--logo" alt="logo" />
+  <!--El rectángulo se mueve en función de en que parte del menú te encuentres en la página, que se hará con JS-->
+  <div class="rectangle"></div>
+  <nav id="my-first" class="nav-container">
+    <ul class="nav-container--list underline">
+      <li class="burger" (click)="toggleMenu()">
+        <mat-icon>{{ isMenuOpen ? "close" : "menu" }}</mat-icon>
+      </li>
+      <li class="menu" [ngClass]="{'menu-open': isMenuOpen}">
+        @for (item of menuItems; track $index) {
+          <a class="menu__item">
+            <span class="menu__item--index">{{ item.index }}</span>
+            <span class="menu__item--name">{{ item.name }}</span>
+          </a>
         }
-        <!-- 
-        @else {
-          <li class="burger ">
-            <button class="burger__button" (click)="toggleMenu()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-              </svg>
-            </button>
-          </li>
-        }
-        -->
-        <li class="align-items-center | menu">
-          @for (item of menuItems; track $index) {
-            <a class="menu__item">
-                <span class="menu__item--index">{{ item.index }}</span>
-                <span class="menu__item--name">{{ item.name }}</span>
-            </a> 
-            }
-        </li>
-      </ul>
-    </nav>
-  </header>
+      </li>
+    </ul>
+  </nav>
+</header>
+
   <!-- <router-outlet></router-outlet> -->
