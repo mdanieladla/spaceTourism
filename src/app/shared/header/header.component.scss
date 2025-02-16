@@ -12,7 +12,7 @@ $menuBreakpoint: 767px;
 .line {
   display: none;
 
-  @media all and (min-width:1024px){
+  @media all and (min-width: $desktopBreakpoint) {
     background: $white;
     display: inline;
     height: 1px;
@@ -31,13 +31,13 @@ $menuBreakpoint: 767px;
   margin: 1rem;
   width: 40px;
 
-    @media all and (min-width: $menuBreakpoint){
+    @media all and (min-width: $menuBreakpoint) {
         height: 48px;
         margin-top: 1.5rem;
         width: 48px;
     }
 
-    @media all and (min-width:1024px){
+    @media all and (min-width: $desktopBreakpoint) {
       margin: 2.5rem;
     }
 }
@@ -89,7 +89,7 @@ $menuBreakpoint: 767px;
         &--index {
           font-weight: bold;
           margin-right: 5px;
-          @media all and (min-width:1024px){
+          @media all and (min-width: $desktopBreakpoint) {
             display: inline;
           }
         }
@@ -113,7 +113,7 @@ $menuBreakpoint: 767px;
         }
       }
 
-      @media all and (min-width: 1024px) {
+      @media all and (min-width: $desktopBreakpoint) {
         height: 15vh;
       }
     }
@@ -128,7 +128,7 @@ $menuBreakpoint: 767px;
     margin-top: 20px;
   }
 
-  @media all and (min-width: $menuBreakpoint){
+  @media all and (min-width: $menuBreakpoint) {
       box-sizing: border-box;
       height: 96px;
       background-color: rgba(255,255,255,0.1);
@@ -136,7 +136,7 @@ $menuBreakpoint: 767px;
       width: auto;
   }
 
-  @media all and (min-width:1024px){
+  @media all and (min-width: $desktopBreakpoint) {
       margin-right: 0;
       margin-top: 20px;
       width: 750px;
