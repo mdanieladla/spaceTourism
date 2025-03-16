@@ -5,7 +5,7 @@ import { DestinationsComponent } from './components/destinations/destinations.co
 import { TechnologyComponent } from './components/technology/technology.component';
 
 export const routes: Routes = [
-    { path: 'home', component: LandingComponent },
+    { path: '', component: LandingComponent },
     { path: 'destinations', component: DestinationsComponent },
     { path: 'crew', component: CrewComponent },
     { path: 'technology', component: TechnologyComponent },
