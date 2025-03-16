@@ -1,1 +1,72 @@
-<p>destinations works!</p>
+<article class="destination-container js-destinations">
+    <div class="destination-container__photo">
+      <h4 class="destination-container__photo--title">
+        <span class="span-0">01</span> Pick your destination
+      </h4>
+      <img
+        src="{{ destinations[0].imageUrl }}"
+        alt="moon"
+        class="destination-container__photo--img"
+      />
+    </div>
+  
+    <!-- NOTA: cuando esta en uno de los planetas el color del texto es blanco y del resto es morado -->
+     <div>
+      <ul class="destination-container__name">
+        @for (destination of destinations; track $index) {
+          <li class="moon planet test-moon" (click)="currentDestinationSelected(destination)">{{ destination.name }}</li>           
+        }
+      </ul>
+        <!-- @for (destination of destinations; track $index) {-->
+        <div class="destination-container__description">
+            <p class="destination-container__description--title">
+              {{ currentDestination.name }}
+            </p>
+            <p class="destination-container__description--paragraph">
+              {{ currentDestination.description }}
+            </p>
+            <div class="destination-container__description--rectangle"></div>
+            <div class="container__div--info">
+              <div class="div__info">
+                <p class="info1">Avg. distance</p>
+                <p class="info2">{{ currentDestination.distance }}</p>
+              </div>
+              <div class="div__info">
+                <p class="info1">Est. travel time</p>
+                <p class="info2">{{ currentDestination.travel }}</p>
+              </div>
+            </div>
+          </div>
+        <!-- } -->
+     </div>
+    <!-- <div>
+      <ul class="destination__container--text--subtitle">
+        <li
+          (click)="this.currentDestination = this.destination"
+          *ngFor="let destination of destinations"
+          class="moon planet test-moon"
+        >
+          {{ destination.name }}
+        </li>
+      </ul>
+      <div class="destination__container--text">
+        <p class="destination__container--text--main-title">
+          {{ currentDestination.name }}
+        </p>
+        <p class="destination__container--text--paragraph">
+          {{ currentDestination.description }}
+        </p>
+        <div class="destination__container--text--rectangle"></div>
+        <div class="container__div--info">
+          <div class="div__info">
+            <p class="info1">Avg. distance</p>
+            <p class="info2">{{ currentDestination.distance }}</p>
+          </div>
+          <div class="div__info">
+            <p class="info1">Est. travel time</p>
+            <p class="info2">{{ currentDestination.travel }}</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </article>

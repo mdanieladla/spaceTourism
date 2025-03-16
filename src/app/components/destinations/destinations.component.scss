@@ -1,0 +1,215 @@
+@import '../../../styles.scss';
+
+$tabletBreakpoint: 767px;
+// body{
+//     background-image: url('../../../../assets/images/background-destination-mobile.jpg');
+//     background-position: center;
+//       background-attachment: fixed;
+//       background-size: cover;
+//       background-repeat: no-repeat;
+// }
+
+.destination-container {
+    display: flex;
+    flex-direction: column;
+
+    @media all and (min-width: $desktopBreakpoint) {
+        flex-direction: row;
+    }
+
+    &__photo {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media all and (min-width: $tabletBreakpoint) {
+            display: block;
+        }
+
+        &--title {
+        color: $white;
+        font-family: $barlowCondensed;
+        font-weight: 100;
+        letter-spacing: 2.36px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media all and (min-width: $tabletBreakpoint) {
+            font-size: 1rem;
+            letter-spacing: 0.211rem;
+            margin-top: 60px;
+            margin-left: 38px;
+            text-align: left;
+        }
+
+        @media all and (min-width:$desktopBreakpoint) {
+            font-size: 1.75rem;
+            letter-spacing: 0.295rem;
+            text-align: center;
+        }
+
+        }
+
+        &--img { 
+            height: 170px;
+            margin-top: 2rem;
+            width: 170px;
+    
+            @media all and (min-width: $tabletBreakpoint) {
+                height: 300px;
+                margin-left: 260px;
+                margin-top: 3rem;
+                width: 300px;
+            }
+            @media all and (min-width:$desktopBreakpoint) {
+                height: 410px;
+                margin-top: 2rem;
+                margin-left: 180px;
+                width: 410px;
+            }
+        }
+    }
+
+    &__name {
+        color: $ligth-purple;
+        display: flex;
+        font-family: $barlowCondensed;
+        font-size: .875rem;
+        justify-content: center;
+        list-style-type: none;
+        margin-top: 26px;
+        text-transform: uppercase;
+
+        @media all and (min-width: $tabletBreakpoint) {
+            font-size: 1rem;
+            letter-spacing: 2.7px;
+            margin-top: 2rem;
+        }
+
+        @media all and (min-width:$desktopBreakpoint) {
+            justify-content: left;
+            margin-left: 100px;
+            margin-top: 6rem;
+        }
+    }
+
+    &__description {
+        padding-left: 24px;
+        padding-right: 24px;
+
+        @media all and (min-width:$desktopBreakpoint) {
+            padding-left: 100px;
+        }
+
+        &--title {
+        color: $white;
+        font-family: $bellefair;
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-align: center;
+        text-transform: uppercase;
+
+          @media all and (min-width: $tabletBreakpoint) {
+            font-size: 5rem;
+            margin-top: 2rem;
+          }
+
+          @media all and (min-width: $desktopBreakpoint) {
+            font-size: 6.25rem;
+          }
+        }
+    
+        &--paragraph {
+            color: $ligth-purple;
+            font-family: $barlowCondensed;
+            font-size: 1rem;
+            font-weight: lighter;
+            line-height: 25px;
+            text-align: center;
+            word-spacing: 5.5px;
+    
+            @media all and (min-width: $tabletBreakpoint) {
+                line-height: 28px;
+                margin-bottom: 3rem;
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            @media all and (min-width: $desktopBreakpoint) {
+                font-size: 1.125rem;
+                line-height: 32px;
+                margin-bottom: 2rem;
+                padding-left: 2rem;
+                text-align: left;
+                word-spacing: 9px;
+            }
+        }
+
+        &--rectangle {
+            background-color: #383B4B;
+            height: 1px;
+            padding-left: 24px;
+            padding-right: 24px;
+            width: auto;
+    
+            @media all and (min-width: $tabletBreakpoint) {
+                padding-left: 97px;
+                padding-right: 98px;
+            }
+    
+            @media all and (min-width: $desktopBreakpoint) {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+}
+
+// TO DO: revisar estos estilos para mejorar 
+.span-0{
+    opacity: 0.25;
+}
+
+.moon{
+    color: $white;
+    cursor: pointer;
+}
+
+.planet{
+    margin-right: 2rem;
+}
+
+.container__div--info{
+    display: flex;
+    flex-direction: column;
+    @media all and (min-width:768px){
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.div__info{
+    padding: 10px;
+}
+
+.info1{
+    color: $ligth-purple;
+    font-family: $barlowCondensed;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.875rem;
+    letter-spacing: 2.36px;
+}
+
+.info2{
+    color: $white;
+    font-family: $bellefair;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 32px;
+    margin-top: 0;
+    @media all and (min-width:1024px){
+        line-height: 1;
+    }
+}
