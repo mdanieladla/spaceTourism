@@ -1,6 +1,5 @@
 @import '../../../styles.scss';
 
-$tabletBreakpoint: 767px;
 // body{
 //     background-image: url('../../../../assets/images/background-destination-mobile.jpg');
 //     background-position: center;
@@ -30,13 +29,13 @@ $tabletBreakpoint: 767px;
         &--title {
         color: $white;
         font-family: $barlowCondensed;
-        font-weight: 100;
+        font-weight: $font-weight-light;
         letter-spacing: 2.36px;
         text-align: center;
         text-transform: uppercase;
 
         @media all and (min-width: $tabletBreakpoint) {
-            font-size: 1rem;
+            font-size: $font-size-md;
             letter-spacing: 0.211rem;
             margin-top: 60px;
             margin-left: 38px;
@@ -53,7 +52,7 @@ $tabletBreakpoint: 767px;
 
         &--img { 
             height: 170px;
-            margin-top: 2rem;
+            margin-top: $spacing-lg;
             width: 170px;
     
             @media all and (min-width: $tabletBreakpoint) {
@@ -64,7 +63,7 @@ $tabletBreakpoint: 767px;
             }
             @media all and (min-width:$desktopBreakpoint) {
                 height: 410px;
-                margin-top: 2rem;
+                margin-top: $spacing-lg;
                 margin-left: 180px;
                 width: 410px;
             }
@@ -75,16 +74,16 @@ $tabletBreakpoint: 767px;
         color: $ligth-purple;
         display: flex;
         font-family: $barlowCondensed;
-        font-size: .875rem;
+        font-size: $font-size-sm;
         justify-content: center;
         list-style-type: none;
         margin-top: 26px;
         text-transform: uppercase;
 
         @media all and (min-width: $tabletBreakpoint) {
-            font-size: 1rem;
+            font-size: $font-size-md;
             letter-spacing: 2.7px;
-            margin-top: 2rem;
+            margin-top: $spacing-lg;
         }
 
         @media all and (min-width:$desktopBreakpoint) {
@@ -95,8 +94,8 @@ $tabletBreakpoint: 767px;
     }
 
     &__description {
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: $spacing-md;
+        padding-right: $spacing-md;
 
         @media all and (min-width:$desktopBreakpoint) {
             padding-left: 100px;
@@ -113,7 +112,7 @@ $tabletBreakpoint: 767px;
 
           @media all and (min-width: $tabletBreakpoint) {
             font-size: 5rem;
-            margin-top: 2rem;
+            margin-top: $spacing-lg;
           }
 
           @media all and (min-width: $desktopBreakpoint) {
@@ -124,7 +123,7 @@ $tabletBreakpoint: 767px;
         &--paragraph {
             color: $ligth-purple;
             font-family: $barlowCondensed;
-            font-size: 1rem;
+            font-size: $font-size-md;
             font-weight: lighter;
             line-height: 25px;
             text-align: center;
@@ -138,9 +137,9 @@ $tabletBreakpoint: 767px;
             }
             @media all and (min-width: $desktopBreakpoint) {
                 font-size: 1.125rem;
-                line-height: 32px;
-                margin-bottom: 2rem;
-                padding-left: 2rem;
+                line-height: $line-height;
+                margin-bottom: $spacing-lg;
+                padding-left: $spacing-lg;
                 text-align: left;
                 word-spacing: 9px;
             }
@@ -149,8 +148,8 @@ $tabletBreakpoint: 767px;
         &--rectangle {
             background-color: #383B4B;
             height: 1px;
-            padding-left: 24px;
-            padding-right: 24px;
+            padding-left: $spacing-md;
+            padding-right: $spacing-md;
             width: auto;
     
             @media all and (min-width: $tabletBreakpoint) {
@@ -159,7 +158,7 @@ $tabletBreakpoint: 767px;
             }
     
             @media all and (min-width: $desktopBreakpoint) {
-                margin-bottom: .5rem;
+                margin-bottom: $spacing-xs;
             }
         }
     }
@@ -176,13 +175,13 @@ $tabletBreakpoint: 767px;
 }
 
 .planet{
-    margin-right: 2rem;
+    margin-right: $spacing-lg;
 }
 
 .container__div--info{
     display: flex;
     flex-direction: column;
-    @media all and (min-width:768px){
+    @media all and (min-width: $tabletBreakpoint) {
         flex-direction: row;
         justify-content: space-evenly;
     }
@@ -197,7 +196,7 @@ $tabletBreakpoint: 767px;
     font-family: $barlowCondensed;
     text-transform: uppercase;
     text-align: center;
-    font-size: 0.875rem;
+    font-size: $font-size-sm;
     letter-spacing: 2.36px;
 }
 
@@ -207,9 +206,9 @@ $tabletBreakpoint: 767px;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.75rem;
-    line-height: 32px;
+    line-height: $line-height;
     margin-top: 0;
-    @media all and (min-width:1024px){
+    @media all and (min-width: $desktopBreakpoint) {
         line-height: 1;
     }
 }

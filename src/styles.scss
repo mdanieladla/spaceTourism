@@ -5,13 +5,25 @@ $bellefair: 'Bellefair', serif;
 $barlowCondensed: 'Barlow Condensed', sans-serif;
 $zen: 'Zen Antique', serif;
 
-// $heading1: 9rem;
-// $heading2: 6rem;
-// $heading3: 3.5rem;
-// $heading4: 2rem;
-// $heading5: 1.75rem;
-// $subheading: .875rem;
-// $nav-text: 1rem;
+// font sizes
+$font-size-xs: .75rem;
+$font-size-sm: .875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-xxl: 1.5rem;
+
+// line height
+$line-height: 32px;
+
+// font weight
+$font-weight-light: 100;
+
+// spacing
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
 
 // colors
 $sky-night: #0B0D17; //RGB (11, 13, 23) -- HSL(230, 35%, 7%).
@@ -19,7 +31,7 @@ $ligth-purple: #D0D6F9; // RGB (208, 214, 249) -- HSL(231, 77%, 90%).
 $white: #FFFFFF; // RGBA(255, 255, 255) -- HSL(0, 0%, 100%).
 
 // breakpoints
-$menuBreakpoint: 767px;
+$tabletBreakpoint: 767px;
 $desktopBreakpoint: 1024px;
 
 /* *************************************** Common styles *************************************** */
@@ -27,7 +39,7 @@ a {
   text-decoration: none;
   color: $white;
   cursor: pointer;
-  padding: 0 8px;
+  padding: 0 $spacing-xs;
 }
 
 .btn-explore {

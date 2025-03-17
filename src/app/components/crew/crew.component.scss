@@ -1,0 +1,184 @@
+@import '../../../styles.scss';
+
+// body{
+//     background-image: url('../../../../assets/images/background-crew-mobile.jpg');
+//     background-position: center;
+//       background-attachment: fixed;
+//       background-size: cover;
+//       background-repeat: no-repeat;
+// }
+
+.crew-container {
+
+    &__title {
+        color: $white;
+        font-family: $barlowCondensed;
+        font-weight: $font-weight-light;
+        letter-spacing: 2.7px;
+        margin-top: $spacing-xs;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media all and (min-width: $tabletBreakpoint) {
+            font-size: $font-size-xl;
+            letter-spacing: 3.3px;
+            margin-left: 39px;
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        @media all and (min-width: $desktopBreakpoint) {
+            font-size: 1.75rem;
+            letter-spacing: 4.72px;
+            margin-left: 150px;
+            text-align: left;
+        }
+    }
+   
+    &__information {
+        .subtitle {
+            color: $white;
+            font-family: $bellefair;
+            margin-top: $spacing-lg;
+            opacity: 0.5;
+            text-align: center;
+            text-transform: uppercase;
+
+            @media all and (min-width: $tabletBreakpoint) {
+                font-size: $font-size-xxl;
+                letter-spacing: 2.7px;
+                margin-top: 4rem;
+            }
+            @media all and (min-width: $desktopBreakpoint) {
+                margin-left: 150px;
+                text-align: left;
+            }
+        }
+
+        .main-title{
+            color: $white;
+            font-family: $bellefair;
+            font-size: $font-size-xxl;
+            margin-bottom: $spacing-sm;
+            text-align: center;
+            text-transform: uppercase;
+
+            @media all and (min-width: $tabletBreakpoint) {
+                margin-top: $spacing-sm;
+                font-size: 2.5rem;
+                margin-bottom: $spacing-md;
+            }
+            @media all and (min-width: $desktopBreakpoint) {
+                font-size: 3.3rem;
+                margin-left: 150px;
+                //margin-top: 1rem;
+                text-align: left;
+            }
+        }
+
+        .paragraph{
+            color: $ligth-purple;
+            font-family: $barlowCondensed;
+            font-size: 0.938rem;
+            line-height: 25px;
+            font-weight: lighter;
+            text-align: center;
+            margin-left: 2.4rem;
+            margin-right: 2.4rem;
+            word-spacing: 5.5px;
+            @media all and (min-width: $tabletBreakpoint){
+                line-height: 28px;
+                margin-left: 12rem;
+                margin-right: 12rem;
+                font-size: $font-size-md;
+            }
+            @media all and (min-width: $desktopBreakpoint){
+                font-size: $font-size-lg;
+                text-align: left;
+                line-height: $line-height;
+                word-spacing: 9px;
+                margin-bottom: $spacing-lg;
+                margin-top: $spacing-sm;
+                margin-left: 9.5rem;
+                white-space: pre-line;
+            }
+        }
+    }
+    
+    &__image{
+        align-self: center;
+        width: 177px;
+        height: 230px;
+        margin-top: $spacing-lg;
+        @media all and (min-width: $tabletBreakpoint) {
+            width: 406px;
+            height: 502px;
+            margin-left: 70px;
+        }
+        @media all and (min-width: $desktopBreakpoint) {
+            width: 404px;
+            height: 510px;
+            margin-top:0;
+            margin-right: $spacing-lg;
+        }
+    }
+}
+
+.rectangle {
+    background-color: #383B4B;
+    height: 1px;
+    margin-left: $spacing-md;
+    margin-right: $spacing-md;
+    width: auto;
+}
+
+.span-0{
+    opacity: 0.25;
+}
+
+
+.circle {
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: #979797;
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+    border: none;
+    @media all and (min-width: $desktopBreakpoint) {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.first{
+    background-color: white;
+}
+
+.div-image-reverse{
+    display: flex;
+    flex-direction: column-reverse;
+    @media all and (min-width: $tabletBreakpoint) {
+        flex-direction: column;
+    }
+    @media all and (min-width: $desktopBreakpoint) {
+        flex-direction: row;
+    }
+}
+
+// .rectangle{
+//     margin: 1rem;
+//         background-color: #383B4B;
+//         width: 327px;
+//         height: 1px;
+// }
+
+.select-crew {
+    display: flex;
+    justify-content: center;
+    margin-top: $spacing-lg;
+
+    @media all and (min-width: $desktopBreakpoint) {
+        justify-content: left;
+    }
+}

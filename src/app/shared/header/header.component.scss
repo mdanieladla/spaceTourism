@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 
 $menuHeight: 60px;
-$menuBreakpoint: 767px;
+
 /*-------------------------- HEADER ------------------------*/
 .header{
     display: flex;
@@ -29,12 +29,12 @@ $menuBreakpoint: 767px;
 
 .img-logo {
   height: 40px;
-  margin: 1rem;
+  margin: $spacing-sm;
   width: 40px;
 
-    @media all and (min-width: $menuBreakpoint) {
+    @media all and (min-width: $tabletBreakpoint) {
         height: 48px;
-        margin-top: 1.5rem;
+        margin-top: $spacing-md;
         width: 48px;
     }
 
@@ -57,7 +57,7 @@ $menuBreakpoint: 767px;
       position: absolute;
       z-index: 1;
   
-      @media (max-width: $menuBreakpoint) {
+      @media (max-width: $tabletBreakpoint) {
         display: block;
       }
     }
@@ -74,8 +74,8 @@ $menuBreakpoint: 767px;
         cursor: pointer;
         display: block;
         font-family: $barlowCondensed;
-        font-size: 0.875rem;
-        font-size: 1rem;
+        font-size: $font-size-sm;
+        font-size: $font-size-md;
         height: $menuHeight;
         letter-spacing: 2.36px;
         line-height: $menuHeight;
@@ -96,7 +96,7 @@ $menuBreakpoint: 767px;
         }
       }
 
-      @media all and (min-width: $menuBreakpoint) {
+      @media all and (min-width: $tabletBreakpoint) {
         align-items: center;
         backdrop-filter: none;
         background: none;
@@ -132,7 +132,7 @@ $menuBreakpoint: 767px;
     margin-top: 20px;
   }
 
-  @media all and (min-width: $menuBreakpoint) {
+  @media all and (min-width: $tabletBreakpoint) {
       box-sizing: border-box;
       height: 96px;
       background-color: rgba(255,255,255,0.1);
