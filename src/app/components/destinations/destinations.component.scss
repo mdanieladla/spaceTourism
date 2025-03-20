@@ -35,7 +35,7 @@
         text-transform: uppercase;
 
         @media all and (min-width: $tabletBreakpoint) {
-            font-size: $font-size-md;
+            font-size: $font-size-base;
             letter-spacing: 0.211rem;
             margin-top: 60px;
             margin-left: 38px;
@@ -81,7 +81,7 @@
         text-transform: uppercase;
 
         @media all and (min-width: $tabletBreakpoint) {
-            font-size: $font-size-md;
+            font-size: $font-size-base;
             letter-spacing: 2.7px;
             margin-top: $spacing-lg;
         }
@@ -123,7 +123,7 @@
         &--paragraph {
             color: $ligth-purple;
             font-family: $barlowCondensed;
-            font-size: $font-size-md;
+            font-size: $font-size-base;
             font-weight: lighter;
             line-height: 25px;
             text-align: center;

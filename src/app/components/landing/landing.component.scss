@@ -29,7 +29,7 @@
     text-transform: uppercase;
 
         @media all and (min-width: $tabletBreakpoint) {
-            font-size: $font-size-xl;
+            font-size: $font-size-md;
             letter-spacing: 3.38px;
             margin-bottom: 0;
             margin-top: 48px;
@@ -73,7 +73,7 @@
         }
 
         @media all and (min-width:$desktopBreakpoint) {
-            font-size: $font-size-lg;
+            font-size: $font-size-md;
             line-height: $line-height;
             text-align: left;
         }
@@ -86,7 +86,7 @@
   border: none;
   cursor: pointer;
   font-family:  $bellefair;
-  font-size: $font-size-xl;
+  font-size: $font-size-md;
   height: 150px;
   margin: 64px auto 0 auto;
   text-transform: uppercase;
