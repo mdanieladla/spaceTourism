@@ -13,7 +13,7 @@ export class DestinationsComponent {
   private readonly DestinationsService = inject(DestinationsService);
 
   destinations: Destinations[] = [];
-  currentDestination: Destinations = this.destinations[0];
+  currentDestination!: Destinations;
 
   constructor() {
     this.DestinationsService.getDestinations()
@@ -24,8 +24,12 @@ export class DestinationsComponent {
       });
   }
 
+  ngOnInit() {
+    this.currentDestination = this.destinations[0];
+  }
   // Para saber el destino actual
-  currentDestinationSelected(destination: Destinations) {
+  selectDestination(destination: Destinations) {
+    this.currentDestination = destination;
     console.log('currentDestinationClicked', destination);
    
   }
