@@ -24,14 +24,14 @@ export class DestinationsComponent {
       });
   }
 
+  // Seleccionamos el primer destino por defecto al inicializar el componente
   ngOnInit() {
     this.currentDestination = this.destinations[0];
   }
-  // Para saber el destino actual
+
+  // Para saber el destino que se selecciona
   selectDestination(destination: Destinations) {
     this.currentDestination = destination;
-    console.log('currentDestinationClicked', destination);
-   
   }
 
   // TO DO: desuscribirse del observable
