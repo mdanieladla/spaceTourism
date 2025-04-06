@@ -12,11 +12,11 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 export class HeaderComponent {
 
   menuItems = [
-    { name: 'Home', index: '00', route: '/home' },
+    { name: 'Home', index: '00', route: '/' },
     { name: 'Destination', index: '01', route: '/destinations' },
     { name: 'Crew', index: '02', route: '/crew' },
     { name: 'Technology', index: '03', route: '/technology' },
-    // { name: 'Contact', index: '04', link: '/contact' }
+    { name: 'My trips', index: '04', route: '/trips' }
   ]
   
   isMenuOpen = false;
