@@ -1,0 +1,94 @@
+@import '../../../styles.scss';
+
+.form-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4rem;
+  
+}
+
+.fieldset {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  @media all and (width >= $tabletBreakpoint) {
+  width: 500px;
+  }
+}
+
+.legend {
+  color: $ligth-purple;
+  font-family: $bellefair;
+  font-size: 1.5rem;
+}
+
+.input{
+  background-color: transparent;
+  border-radius: 5px;
+  border: .5px solid hsl(246, 25%, 77%);
+  color: $ligth-purple;
+  font-family: $bellefair;
+  height: 50px;
+  margin-bottom: 1rem;
+  /* padding-left: 15px; */
+  width: 350px;
+}
+
+input:invalid{
+  border: 1px solid red;
+}
+
+/* input:valid{
+  border: 1px solid green;
+} */
+
+::placeholder{
+  font-family: $bellefair;
+  font-size: 1.125rem;
+  /* font-weight: 700; */
+  color: $ligth-purple;
+  letter-spacing: 2px;
+  padding-left: .5rem;
+  /* text-transform: uppercase; */
+}
+
+.btn{
+  background-color: $white;
+  border-radius: 5px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  height: 50px;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+/*ERR input*/
+.error-message {
+  color: rgb(253, 76, 76);
+  font-family: $bellefair;
+  font-size: 14px;
+
+}
+
+.redirect-link {
+  font-family: $bellefair;
+  font-size: 1rem;
+  color: $ligth-purple;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+  text-decoration: none;
+}
