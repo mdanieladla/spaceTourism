@@ -4,42 +4,27 @@
     </h4>
     <div class="desktop-test">
       <div class="div-img">
-        <!-- <img
-          class="img-vehicle"
-          src="{{ currentTechnology.imagesPortrait }}"
-          alt="launching vehicle"
-        /> -->
         <img
           class="img-vehicle"
-          src="/../../assets/images/technology/image-launch-vehicle-portrait.jpg"
+          src="{{currentTechnology.imagePortraitUrl}}"
           alt="launching vehicle"
         />
       </div>
       <div class="technology-container__information">
         <div class="container-btns">
-          <!-- <button
-            *ngFor="let technology of technology; let i = index"
-            (click)="this.currentTechnology = this.technology"
-            class="technology__container--div--info--btns--btn"
+          @for (technology of technology; track $index) {
+            <button
+            (click)="selectTechnology(technology)"
+            class="container-btns__btn"
           >
-            {{ i + 1 }}
-          </button> -->
-          <button class="container-btns__btn">
-            1
+            {{ $index + 1 }}
           </button>
-          <button class="container-btns__btn">
-            2
-          </button>
-          <button class="container-btns__btn">
-            3
-          </button>
+          }
         </div>
         <div class="information-container">
           <p class="information-container__title">The terminology...</p>
-          <h5 class="information-container__technology-name">Launch vehicle</h5>
-          <p class="information-container__description">
-            A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
-          </p>
+          <h5 class="information-container__technology-name">{{currentTechnology.name}}</h5>
+          <p class="information-container__description">{{currentTechnology.description}}</p>
         </div>
       </div>
     </div>
