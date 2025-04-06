@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { DestinationsService } from '../../services/destinations.service';
+import { DataService } from '../../services/data.service';
 import { provideHttpClient } from '@angular/common/http';
 import { Destinations } from '../../models/destinations.model';
 
@@ -10,13 +10,13 @@ import { Destinations } from '../../models/destinations.model';
   styleUrl: './destinations.component.scss',
 })
 export class DestinationsComponent {
-  private readonly DestinationsService = inject(DestinationsService);
+  private readonly DataService = inject(DataService);
 
   destinations: Destinations[] = [];
   currentDestination!: Destinations;
 
   constructor() {
-    this.DestinationsService.getDestinations()
+    this.DataService.getDestinations()
       .subscribe((data) => {
         this.destinations = data;
         console.log('hola, data:', this.destinations);
