@@ -33,14 +33,22 @@
   font-size: 1.5rem;
 }
 
-.input{
+.label {
+  color: $ligth-purple;
+  display: flex;
+  flex-direction: column;
+  font-family: $bellefair;
+}
+
+.input {
   background-color: transparent;
   border-radius: 5px;
   border: .5px solid hsl(246, 25%, 77%);
   color: $ligth-purple;
   font-family: $bellefair;
   height: 50px;
-  margin-bottom: 1rem;
+  margin-bottom:$spacing-sm;
+  margin-top: 4px;
   /* padding-left: 15px; */
   width: 350px;
 }
@@ -72,7 +80,7 @@ input:invalid{
   font-weight: 600;
   height: 50px;
   letter-spacing: 2px;
-  margin-top: 1rem;
+  margin-top:$spacing-sm;
   text-transform: uppercase;
 }
 
@@ -86,7 +94,7 @@ input:invalid{
 
 .redirect-link {
   font-family: $bellefair;
-  font-size: 1rem;
+  font-size: $font-size-base;
   color: $ligth-purple;
   letter-spacing: 2px;
   margin-top: 2rem;
