@@ -1,17 +1,21 @@
  <!--INICIAR SESIÓN-->
  <section class="form-container">
-  <form action="" id="login" method="post" class="form | js-form">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"  id="login" method="post" class="form">
     <fieldset class="border p-4 fieldset-container">
       <legend class="legend">Log in</legend>
-      <span class="error-message | js-email-err"></span>
+      <!-- @if (loginForm.controls['email'].errors?.['required'] && loginForm.controls['password'].errors?.['required']) {
+        <span class="error-message">Please fill in your email</span>
+      } -->
       <label for="email">
-        <input class="input | js-email" type="text" id="email" placeholder="Your email..">
+        <input class="input" type="text" id="email" placeholder="Your email.." formControlName="email">
       </label>
-      <span class="error-message | js-pass-err"></span>
+      <!-- @if (loginForm.controls['email'].errors?.['required'] && loginForm.controls['password'].errors?.['required']) {
+        <span class="error-message">Please fill in a correct password</span>
+      } -->
       <label for="password">
-        <input class="input | js-password" type="password" id="password" placeholder="A secret password..">
+        <input class="input" type="password" id="password" placeholder="A secret password.." formControlName="password">
       </label>
     </fieldset>
-    <button class="btn | js-submit" type="button">To space!</button>
+    <button class="btn" type="submit">To space!</button>
   </form>
 </section>
